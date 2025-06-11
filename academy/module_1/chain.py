@@ -1,13 +1,13 @@
 ﻿from langchain_core.messages import HumanMessage, AIMessage
 from rich import print # laat prints mooi zien in de terminal
-from academy.module_0.basics import get_azure_chat_openai
+from academy.module_0.basics import get_azure_llm
 
 messages = [AIMessage(content=f"So you said you were researching ocean mammals?", name="Model")]
 messages.append(HumanMessage(content=f"Yes, that's right.", name="Lance"))
 messages.append(AIMessage(content=f"Great, what would you like to learn about.", name="Model"))
 messages.append(HumanMessage(content=f"I want to learn about the best place to see Orcas in the US.", name="Lance"))
 
-llm = get_azure_chat_openai(model="o3-mini")
+llm = get_azure_llm(model="o3-mini")
 
 def part1():
     for m in messages:

@@ -1,4 +1,4 @@
-﻿from academy.module_0.basics import get_azure_chat_openai
+﻿from academy.module_0.basics import get_azure_llm
 from langgraph.graph import MessagesState
 from langchain_core.messages import HumanMessage, SystemMessage
 from langgraph.graph import START, StateGraph
@@ -6,8 +6,7 @@ from langgraph.prebuilt import tools_condition
 from langgraph.prebuilt import ToolNode
 from langgraph.checkpoint.memory import MemorySaver
 
-
-llm = get_azure_chat_openai(model="o3-mini")
+llm = get_azure_llm(model="o3-mini")
 
 def multiply(a: int, b: int) -> int:
     """Multiply a and b.
